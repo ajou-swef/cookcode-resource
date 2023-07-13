@@ -17,6 +17,10 @@ public final class cookcode_resourceTests: XCTestCase {
     }
     
     func testColor() {
-        let color: Color = .mainColor
+        if #available(iOS 13.0, *) {
+            let color: Color = .mainColor
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }

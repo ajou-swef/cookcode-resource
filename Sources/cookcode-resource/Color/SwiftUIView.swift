@@ -8,12 +8,25 @@
 import SwiftUI
 
 struct SwiftUIView: View {
+    @available(iOS 13.0, *)
+    @available(macOS 10.15, *)
     var body: some View {
-        Rectangle()
+        VStack {
+            Rectangle()
+                .foregroundColor(.mainColor)
+            
+            Rectangle()
+                .foregroundColor(.green)
+            
+            Rectangle()
+                .foregroundColor(.gray808080)
+        }
     }
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
+    @available(iOS 13.0, *)
+    @available(macOS 10.15, *)
     static var previews: some View {
         SwiftUIView()
     }
